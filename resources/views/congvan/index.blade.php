@@ -12,11 +12,11 @@
 	        <h4 class="page-head-line">Tin tức và công văn</h4>
 	    </div>
 	</div>
-@if (count($posts) > 0)
+@if (count($congvans) > 0)
     <div id="posts-list">
         <ul>
-        @foreach ($posts as $post)
-            <li class="title_post new"><a href="{{ url('/post').'/'.$post->id }}">{{ $post->title }} ({{ $post->created_at }})</a></li>
+        @foreach ($congvans as $congvan)
+            <li class="title_post new"><a href="{{ url('/congvan').'/'.$congvan->id }}">{{ $congvan->tieu_de_cv }} ({{ $congvan->created_at }})</a></li>
         @endforeach
         </ul>
     </div>

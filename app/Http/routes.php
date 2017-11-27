@@ -14,9 +14,12 @@ Route::auth();
 
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
-Route::get('/posts', 'PostController@index');
-Route::get('/post/{post}', 'PostController@detail');
+// Route::get('/posts', 'PostController@index');
+// Route::get('/post/{post}', 'PostController@detail');
 Route::get('/user/thong-bao-bhxh', 'ReportController@index');
+
+Route::get('/congvans', 'CongVanPBController@index');
+Route::get('/congvan/{id}', 'CongVanPBController@detail');
 
 Route::get('/jobs', 'JobController@index');
 
@@ -52,11 +55,11 @@ Route::group(['middleware' => 'auth', 'prefix' => 'profile'], function () {
 Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
 	Route::get('/', 'HomeController@index');
 	Route::get('/view', 'AdminController@index');
-	Route::get('/posts', 'PostController@index_admin');
-	Route::get('/post/edit/{post}', 'PostController@edit');
-	Route::post('/post', 'PostController@store');
-	Route::patch('/post/{post}', 'PostController@update');
-	Route::delete('/post/{post}', 'PostController@destroy');
+	// Route::get('/posts', 'PostController@index_admin');
+	// Route::get('/post/edit/{post}', 'PostController@edit');
+	// Route::post('/post', 'PostController@store');
+	// Route::patch('/post/{post}', 'PostController@update');
+	// Route::delete('/post/{post}', 'PostController@destroy');
 
 	Route::get('/upload', 'ExcelController@showUpload');
 	Route::post('/upload', 'ExcelController@upload');

@@ -9,18 +9,10 @@
 @section('content')
 	<div class="row">
 	    <div class="col-md-12">
-	        <h4 class="page-head-line">{!! $post->title !!}</h4>
+	        <h4 class="page-head-line">{!! $congvan->tieu_de_cv !!}</h4>
 	    </div>
 	</div>
 	<div class="post-content">
-		{!! $post->content !!}	
-	</div>
-	<div class="post-attachment">
-		@if(count($post->attachments) > 0)
-			Công văn đính kèm:
-			@foreach ($post->attachments as $attachment)
-				<a href="{{ url('/uploads/').'/'.$attachment->path }}">{{ $attachment->path }}</a>
-			@endforeach
-		@endif
+		{!! $congvan->noi_dung_cv !!}	
 	</div>
 @endsection

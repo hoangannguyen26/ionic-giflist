@@ -82,7 +82,7 @@ document.getElementsByTagName("head")[0].appendChild(meta_head);
                 e.stopPropagation();
             });
             $("#xemCongVan").on('click', function(){
-                makeLiAJAX("{{url('/user/api/townships')}}",'listTownShip');
+                makeLiAJAX("{{url('/user/api/phongbans')}}",'listTownShip');
             })
 
             // makeLiAJAX("{{url('/user/api/townships')}}",'listTownShip');
@@ -201,7 +201,7 @@ document.getElementsByTagName("head")[0].appendChild(meta_head);
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="{{ url('/admin/upload') }}"><i class="fa fa-btn fa-upload"></i>Upload thông báo</a></li>
                         <li><a href="{{ url('/admin/homepage') }}"><i class="fa fa-btn fa-home"></i>Thay đổi nội dung trang chủ</a></li>
-                        <li><a href="{{ url('/admin/posts') }}"><i class="fa fa-btn fa-newspaper-o"></i>Quản lý công văn</a></li>
+                        <li><a href="{{ url('/admin/congvans') }}"><i class="fa fa-btn fa-newspaper-o"></i>Quản lý công văn</a></li>
                         <li><a href="{{ url('/admin/townships') }}"><i class="fa fa-btn fa-university"></i>Quản lý quận huyện</a></li>
                          <li><a href="{{ url('/admin/jobs') }}"><i class="fa fa-btn fa-hand-paper-o"></i>Quản lý việc làm thêm</a></li>
                         <li><a href="{{ url('/admin/view') }}"><i class="fa fa-btn fa-eye"></i>Xem luợt view</a></li>

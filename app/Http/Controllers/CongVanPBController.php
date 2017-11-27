@@ -19,11 +19,10 @@ class CongVanPBController extends Controller
     public function index(Request $request)
     {
         $congvans = array();
-        if($request->township_id != null)
-            $congvans = CongVanPB::where('township_id',$request->township_id)->with('attachments')->get();
+        if($request->ma_phong_ban != null)
+            $congvans = CongVanPB::where('ma_phong_ban',$request->ma_phong_ban)->get();
         else
-            $congvans = CongVanPB::with('attachments')
-            ->orderBy('created_at', 'desc')
+            $congvans = CongVanPB::orderBy('created_at', 'desc')
             ->get();
     	return view('congvan.index', [
         	'congvans' => $congvans 
@@ -32,7 +31,7 @@ class CongVanPBController extends Controller
     }
     public function detail(Request $request, $id)
     {
-        $congvan = CongVanPB::with('attachments')->findOrFail($id);
+        $congvan = CongVanPB::findOrFail($id);
         return view('congvan.detail', [
             'congvan' => $congvan 
         ]);
@@ -73,7 +72,7 @@ class CongVanPBController extends Controller
         $congvan->noi_dung_cv = $request->noi_dung_cv;
         $congvan->ma_phong_ban = $request->ma_phong_ban;
         $congvan->chu_thich = $request->chu_thich;
-        
+
         $congvan->updatedBy()->associate(\Auth::user());
         $congvan->createdBy()->associate(\Auth::user());
         $congvan->save();

@@ -56,9 +56,10 @@
             @include('admin.phongban.add_fields')
         <div class="form-group">
             <div class="col-sm-offset-3 col-sm-6">
-                <button type="submit" class="btn btn-default">
+                <button type="submit" class="btn btn-primary">
                     <i class="fa fa-plus"></i>Thêm bộ phận
                 </button>
+                <a href="{{ url('/admin/congvans') }}" class="btn btn-danger" role="button"><i class="fa fa-arrow-left"></i>Trở lại quản lý công văn</a>
             </div>
         </div>
     </form>

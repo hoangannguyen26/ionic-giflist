@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\CongVanPB;
 
 class Phongban extends Model
 {
@@ -14,6 +15,11 @@ class Phongban extends Model
             'chu_thich'
         );
     
+        public function congVans()
+        {
+            return $this->hasMany(CongVanPB::class, 'ma_phong_ban', 'id');
+        }
+
         public function updatedBy()
         {
             return $this->belongsTo(User::class, 'updated_by', 'id');

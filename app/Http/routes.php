@@ -37,6 +37,7 @@ Route::group(['prefix' => 'user/api'], function () {
 	Route::get('report/{report}', 'ReportController@api_get_by_id');
 	Route::get('township/{township}', 'TownShipController@api_get_by_id');
 	Route::get('townships', 'TownShipController@api_get_all');
+	Route::get('phongbans', 'PhongbanController@api_get_all');
 });
 
 // For normal user logged-in
@@ -75,6 +76,12 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
 	Route::get('/phongban/edit/{id}', 'PhongbanController@edit');
 	Route::patch('/phongban/{id}', 'PhongbanController@update');
 	Route::delete('/phongban/{phongban}', 'PhongbanController@destroy');
+
+	Route::get('/congvans', 'CongVanPBController@index_admin');
+	Route::get('/congvan/edit/{congvan}', 'CongVanPBController@edit');
+	Route::post('/congvan', 'CongVanPBController@store');
+	Route::patch('/congvan/{congvan}', 'CongVanPBController@update');
+	Route::delete('/congvan/{congvan}', 'CongVanPBController@destroy');
 
 	Route::get('/jobs', 'JobController@index_admin');
 	Route::post('/jobs', 'JobController@store');

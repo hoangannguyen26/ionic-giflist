@@ -19,7 +19,7 @@ class CreateCvPhongbanTable extends Migration
             $table->text('chu_thich');
             $table->timestamps();
             $table->integer('ma_phong_ban', false, true);
-            $table->foreign('id')->references('id')->on('tbl_phongban');
+            $table->foreign('ma_phong_ban')->references('id')->on('tbl_phongban');
 
             $table->integer('created_by', false, true);
             $table->integer('updated_by', false, true);

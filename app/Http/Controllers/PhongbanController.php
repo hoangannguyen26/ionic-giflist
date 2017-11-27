@@ -102,8 +102,8 @@ class PhongbanController extends Controller
             ->get();
         foreach ($phongbans as $dt) {
             $tmp = array();
-            $tmp['key'] = $dt->phongban_id;
-            $tmp['value'] = $dt->phongban_name;
+            $tmp['key'] = $dt->id;
+            $tmp['value'] = $dt->ten_phong_ban;
             array_push($response['data'], $tmp);
         }
         return response()->json($response);

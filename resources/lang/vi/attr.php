@@ -63,5 +63,13 @@ return [
         'township_name' => 'Tên quận/huyện',
         'address' => 'Địa chỉ của quận/huyện',
         'bank_info' => 'Thông tin ngân hàng của quận',
+    ],
+    'congvan' => [
+        'title' => 'tiêu đề',
+        'township_id' => 'mã bộ phận',
+        'content' => 'nội dung công văn'
+    ],
+    'phongban' => [
+        'ten_phong_ban' => 'tên bộ phận'
     ]
 ];

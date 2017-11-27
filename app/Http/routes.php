@@ -70,6 +70,12 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
 	Route::patch('/township/{id}', 'TownShipController@update');
 	Route::delete('/township/{township}', 'TownShipController@destroy');
 
+	Route::get('/phongbans', 'PhongbanController@index');
+	Route::post('/phongban', 'PhongbanController@store');
+	Route::get('/phongban/edit/{id}', 'PhongbanController@edit');
+	Route::patch('/phongban/{id}', 'PhongbanController@update');
+	Route::delete('/phongban/{phongban}', 'PhongbanController@destroy');
+
 	Route::get('/jobs', 'JobController@index_admin');
 	Route::post('/jobs', 'JobController@store');
 	Route::patch('/jobs/edit/{id}', 'JobController@update');

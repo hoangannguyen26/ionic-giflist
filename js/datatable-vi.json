@@ -1,0 +1,24 @@
+{
+	"decimal":        "",
+	"emptyTable":     "Không có dữ liệu",
+	"info":           "Ðang hiển thị _START_ đến _END_ của tổng cộng _TOTAL_ đối tượng",
+	"infoEmpty":      "Ðang hiển thị 0 đến 0 của tổng cộng 0 đối tượng",
+	"infoFiltered":   "(filtered from _MAX_ total entries)",
+	"infoPostFix":    "",
+	"thousands":      ",",
+	"lengthMenu":     "Hiển thị _MENU_ đối tượng",
+	"loadingRecords": "Loading...",
+	"processing":     "Đang tải dữ liệu",
+	"search":         "Tìm kiếm:",
+	"zeroRecords":    "Không tìm thấy dữ liệu",
+	"paginate": {
+	    "first":      "Trang đầu",
+	    "last":       "Trang cuối",
+	    "next":       "Trang tiếp",
+	    "previous":   "Trang trước"
+	},
+	"aria": {
+	    "sortAscending":  ": activate to sort column ascending",
+	    "sortDescending": ": activate to sort column descending"
+	}
+}

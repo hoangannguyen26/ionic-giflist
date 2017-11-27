@@ -1,0 +1,5 @@
+[10-Jul-2017 06:01:35 UTC] PHP Notice:  Undefined variable: factory in /home/thob4286/public_html/database/factories/ModelFactory.php on line 14
+[10-Jul-2017 06:01:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function define() on null in /home/thob4286/public_html/database/factories/ModelFactory.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/thob4286/public_html/database/factories/ModelFactory.php on line 14

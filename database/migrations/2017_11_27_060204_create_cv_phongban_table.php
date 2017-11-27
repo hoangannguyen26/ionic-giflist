@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostsTable extends Migration
+class CreateCvPhongbanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,15 +12,17 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_posts', function (Blueprint $table) {
+        Schema::create('tbl_cv_phongban', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('title');
-            $table->text('content');
+            $table->text('tieu_de_cv');
+            $table->text('noi_dung_cv');
+            $table->text('chu_thich');
             $table->timestamps();
-            $table->integer('township_id', false, true);
+            $table->integer('ma_phong_ban', false, true);
+            $table->foreign('id')->references('id')->on('tbl_phongban');
+
             $table->integer('created_by', false, true);
             $table->integer('updated_by', false, true);
-            $table->foreign('township_id')->references('township_id')->on('tbl_townships');
             $table->foreign('created_by')->references('id')->on('tbl_user');
             $table->foreign('updated_by')->references('id')->on('tbl_user');
         });
@@ -33,6 +35,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('tbl_posts');
+        Schema::drop('tbl_cv_phongban');
     }
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAttachmentsTable extends Migration
+class CreatePhongbanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,11 @@ class CreateAttachmentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_attachments', function (Blueprint $table) {
+        Schema::create('tbl_phongban', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('type');
-            $table->text('path');
+            $table->text('ten_phong_ban');
+            $table->text('chu_thich');
             $table->timestamps();
-            $table->integer('posts_id', false, true);
-            $table->foreign('posts_id')->references('id')->on('tbl_posts');
 
             $table->integer('created_by', false, true);
             $table->integer('updated_by', false, true);
@@ -34,6 +32,6 @@ class CreateAttachmentsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('tbl_attachments');
+        Schema::drop('tbl_phongban');
     }
 }
